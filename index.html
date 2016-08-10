@@ -64,21 +64,21 @@
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/mechSummary.png" alt="" /></div><div class="content">
 								<h2><a href="mechanical.html">Mechanical Design</a></h2>
-								<p>TODO: add a mechy picture to the left. TODO: add a blurb about mecahnical design</p>
+								<p>For the mechanical aspects of our robot, we designed the main chassis, arm and claw mechanism, and the drivetrain.</p>
 							</div>
 						</section>
 						<section class="spotlight">
 							<div class="image"><img src="images/circuitOverview.jpg" alt="" /></div><div class="content">
 								<h2><a href="electrical.html">Electrical Design</a></h2>
-								<p> TODO: add a blurb about electriacal design TODO: resize/crop this photo to make it fit better</p>
+								<p>For the electrical aspects of our robot, we designed circuitry for tape-following, IR detection, and motor driving.</p>
 							</div>
 						</section>
 						<section class="spotlight">
 							<div class="image"><img src="images/codeScreenshot.jpg" alt="" /></div><div class="content">
 								<h2><a href="software.html">Software Design</a></h2>
-								<p> TODO: add a blurb about software design</p>
+								<p>For the software aspects of our robot, we wrote algorithms for navigating the competition surface, picking up and dropping off passengers, and PID control for tape-following.</p>
 							</div>
 						</section>
 					</section>
@@ -87,32 +87,44 @@
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Features</h2>
-								<p>TODO: add a blurb about features</p>
+								<h2>Features of the Roombot</h2>							
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane-o">
+								<li class="icon fa-circle">
 									<h3>Chassis</h3>
-									<p> A circular chassis was optimal for turning on the spot and detecting collisions from all sides. </p> </li>
-								<li class="icon fa-laptop">
+									<p> A circular chassis was optimal for turning on the spot and detecting collisions from all sides. </p>
+                                    <p><a href="#" class="button">Chassis Details</a></p>
+
+                                </li>
+								<li class="icon fa-car">
 									<h3>Drivetrain</h3>
 									<p> TODO: add a blurb about the drivetrain</p>
+                                    <p><a href="#" class="button">Drivetrain Details</a></p>
+
+                                </li>
+								<li class="icon fa-hand-paper-o">
+									<h3>Arm & Claw</h3>
+									<p>A 3-axis parallel arm was created to reach out for passengers at various distances, with a claw shaped perfectly for the passenger size. </p>
+                                    <p><a href="#" class="button">Arm & Claw Details</a></p>
+
+                                </li>
+								<li class="icon fa-map">
+									<h3>Tape-Following</h3>
+									<p>QRD1114 Optical Detectors were used in a comparator circuit to determine when the robot was on or off the tape. PID controls were implemented for self-correcting and smooth tape-following maneuvers.</p>
+                                    <p><a href="#" class="button">Tape-Following Details</a></p>
+
+								</li>
+								<li class="icon fa-wifi">
+									<h3>IR Detection</h3>
+									<p>QSD124 Phototransistors were used in with biquad circuits to bandpass filter for 1kHz IR, amplify, and peak detect the signal from passengers and the dropoff zone. IR Sensors were used to faciliate navigation, pickup, and dropoff.</p>
+                                    <p><a href="#" class="button">IR Detection Details</a></p>
+
 								</li>
 								<li class="icon fa-code">
-									<h3>Arm</h3>
-									<p> TODO: add a blurb about the arm </p>
-								</li>
-								<li class="icon fa-headphones">
-									<h3>Sensors</h3>
-									<p> TODO: add a blurb about the sensors</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>Circuits</h3>
-									<p> TODO: add a blurb about the circuits</p>
-								</li>
-								<li class="icon fa-flag-o">
 									<h3>Navigation</h3>
-									<p> TODO: add a blurb about the navigation algorithm </p>
+									<p>The competition map was stored in our robot, allowing it to calculate the available paths to traverse when seeking passengers and the optimal path to the dropoff once a passenger was acquired. </p>
+                                    <p><a href="#" class="button">Navigation Details</a></p>
+
 								</li>
 							</ul>
 						</div>
@@ -135,13 +147,17 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
-							TODO: fix these icons because they're sort of irrelevant
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/djschultz/enph253group6" class="icon fa-github"><span class="label">Github</span></a></li>
+                                                         
+                            <!--<li><a href="#" class="icon fa-facebook"><span class="label">facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">instagram</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope-o"><span class="label">email</span></a></li>-->
 						</ul>
+
+                        <ul class="actions vertical">
+                            <li><a href="#" class="button ">To Top</a></li>
+                        </ul>
 						<ul class="copyright">
 							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
