@@ -48,26 +48,38 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>Sensors</h3>
-								<p> TODO: insert blurb about the sensors. TODO: add a picture of the QSD holder. TODO: add a picture of the collision sensors on the underside of the chassis (also shows the QRD's ) TODO: add a picture of the QRD on the claw TODO: add references to the datasheets of the sensors</p>
-
-								<h5> Collision Detections </h5>
-								<p> TODO: add a blurb about collision detection sensors TODO: add a link to the mechanical collision bumper section</p>
-								<h5> Passenger Detection </h5>
-
-								<h5> Tape Following </h5>
-								<p> TODO: add a blurb about the tape following TODO: add a picture of the QRD bracket </p>
+								<h3> H-Bridges </h3>
+								<p> The Scott Lawson H-Bridge was selected to power the drive train DC motors over the classic H-Bridge design for its reliability and its minimalistic design.
+								<center><figure><img src="images/scotthbridge.png" width="100%" ></figure> <figcaption> Alternative H-Bridge Schematic </figcaption> </center>
 								<hr/>
 
-								<h3>Circuits</h3>
-								<p> TODO: insert blurb about the circuits.  TODO: add pictures and circuit diagrams of the scott lawson hbridge. TODO: add links to the datasheets  </p>
-								<h5> Biquad circuit </h5>
-								<p> TODO: add blurb about the biquad filter circuit TODO: justify how we choose resistor and capacitor values </p>
-								<center><figure><img src="images/Biquad.jpg"></figure><figcaption> Biquad Filter Circuit </figcaption></center>
+								<h3> Tape Following </h3>
+								<p> The Roombot was made to follow a track of black electrical tape via digital signals from four QRDs. </p>
+								<p> TODO: Heat Shrink for isolation/noise reduction + bracket positionning </p>
+								<center><figure><img src="" width="100%" ></figure> <figcaption> QRD Tape Following Bracket </figcaption> </center>
+								<br/>
 
-								<h5> QRD comparator circuit </h5>
-								<p> TOOD: add blurb about the comparator circuit TODO: talk about the resistor values for the QRD sensors </p>
-								<center><figure><img src="images/QRDSchematic.jpg"></figure> <figcaption> QRD Comparator Circuit Schematic </figcaption> </center>
+								<h5> QRD Analog-to-Digital Circuit </h5>
+								<p> The QRD1114 outputs a maximum of 1 mA of current when the surface is reflective. As such, a 4.7kOhm resistor was chosen to scale the output of the QRD to the full 5V range of values. </p>
+								<p> An Analog-to-Digital Circuit was designed with a modifiable threshold such that the output of the circuit read HIGH when the QRD was on the tape and LOW when the QRD was not. </p>
+								<center><figure><img src="images/QRDSchematic.jpg" width="100%" ></figure> <figcaption> QRD Analog-to-Digital Schematic </figcaption> </center>
+								<hr/>
+
+								<h3> IR Detection </h3>
+								<p> The Roombot was equipped with a total of five QSDs. Three of the QSDs were optimized for passenger detection. Two of the QSDs were optimized for drop-off-zone detection. </p>
+								<center><figure><img src="" width="100%" ></figure> <figcaption> QSD Passenger Bracket </figcaption> </center>
+								<center><figure><img src="" width="100%" ></figure> <figcaption> QSD Drop-Off-Zone Tower </figcaption> </center>
+								<br/>
+
+								<h5> QSD Signal Processing Circuit </h5>
+								<p> The QSD Signal Processing Circuit consists of the QSD itself, a Unity Gain Buffer Amplifier, a Biquad Active Filter and finally, a Peak Detector.
+									Resistor and capacitor values were selected to isolate the desired 1kHz frequencies. </p>
+								<center><figure><img src="images/Biquad.jpg" width="100%" ></figure><figcaption> QSD Signal Processing Schematic </figcaption></center>
+								<hr/>
+
+								<h3> Datasheet References </h3>
+								<li><a href="https://www.fairchildsemi.com/datasheets/qr/qrd1114.pdf">QRD1114</a></li>
+								<li><a href="https://www.fairchildsemi.com/datasheets/QS/QSD123.pdf">QSD124</a></li>
 
 							</div>
 						</section>
@@ -88,7 +100,7 @@
                             <li><a href="#" class="button ">To Top</a></li>
                         </ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; ENPH 253 </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
