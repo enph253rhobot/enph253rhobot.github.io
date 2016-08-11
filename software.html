@@ -47,14 +47,28 @@
 					</header>
 					<section class="wrapper style5">
 						<div class="inner">
-
+                            <div id="navigation"></div>
+                            <hr/>
 							<h3>Navigation</h3>
-							<p>TODO: Write a blurb about navigation. TODO: talk abotu the PID </p>
+                            <p>
+                                To facilitate navigation along the competition surface, we made use of the QRD1114 sensors <a href="https://enph253rhobot.github.io/electrical.html">described here</a>.</p>
+                                <h5>Tape Following</h5>
+                                <p>PD Control was used for the robot's tape-following, correcting for when the two main tape-following QRDs were 
+                                on or off the black tape. Proportional and Derivative gains were tuned with each iteration of the robot until 
+                                the robot was capable of smoothly following tape along straight edges, curved edges, and in a circular path. 
+                                </p> 
+                                <h5>Map</h5>
+                                <p>In order to navigate successfully towards passengers and the dropoff zone, we programmed the map into the 
+                                TINAH board. The nodes on the map were stored in a incidence matrix, which described the cardinal direction of each adjacent node
+                                with respect to the current node. 
 
+                                We then developed an algorithm for calculating the optimal path to the dropoff zone from any point on the map, so the robot will know 
+                                how to head to the dropoff at any point after acquiring a passenger. 
+                                </p>     
 							<hr />
 
-							<h4>Arm</h4>
-							<p> TODO: add a blirb about the arm code</p>
+							<h3>Arm & Claw</h3>
+                            <p> The miniature city had varying distances between the road and the curb. Thus it was very important to have adaptibility in how far the arm reaches out for the passengers. The mechanical arm had programming which allowed the claw to move forward in increments, with a proximinity sensor <a href="https://enph253rhobot.github.io/electrical.html">(QRD)</a> attached to the end of the claw to determine when the passenger was in the claw's grasp. </p>
 
 						</div>
 					</section>
