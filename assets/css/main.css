@@ -3933,15 +3933,15 @@
     }
 
     div.aboutUs {
-        -webkit-column-count: 4; /* Chrome, Safari, Opera */
+		height: 500px;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
     column-count: 4;
-		column-width: 100px;
-    -moz-column-width: 100px;
-    -webkit-column-width: 100px;
+
     }
 
 		div.keeptogether {
     display: inline-block;
     width: 100%;
+		height: auto;
  }
