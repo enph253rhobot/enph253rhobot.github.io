@@ -3929,11 +3929,11 @@
         border-radius: 50%;
         display:block;
         padding:10px;
-                margin:auto;
+        margin:auto;
     }
 
     div.aboutUs {
-		height: 500px;
+		height: 600px;
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
     column-count: 4;
@@ -3944,4 +3944,5 @@
     display: inline-block;
     width: 100%;
 		height: auto;
- }
+
+		}
