@@ -1,108 +1,112 @@
 ﻿<!DOCTYPE HTML>
 <!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Spectral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Software Design</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
+<head>
+    <title>Software Design</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+<body>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Home</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="mechanical.html">Mechanical</a></li>
-											<li><a href="electrical.html">Electrical</a></li>
-											<li><a href="software.html">Software</a></li>
-											<li><a href="about.html">About Us</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Home</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="mechanical.html">Mechanical</a></li>
+                                <li><a href="electrical.html">Electrical</a></li>
+                                <li><a href="software.html">Software</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Main -->
-				<article id="mainSoftware">
-					<header>
-						<h2>Software Design</h2>
-					</header>
-					<section class="wrapper style5">
-						<div class="inner">
-                            <div id="navigation"></div>
-                            <hr/>
-							<h3>Navigation</h3>
-                            <p>
-                                To facilitate navigation along the competition surface, we made use of the QRD1114 sensors <a href="https://enph253rhobot.github.io/electrical.html">described here</a>.</p>
-                                <h5>Tape Following</h5>
-                                <p>PD Control was used for the robot's tape-following, correcting for when the two main tape-following QRDs were
-                                on or off the black tape. Proportional and Derivative gains were tuned with each iteration of the robot until
-                                the robot was capable of smoothly following tape along straight edges, curved edges, and in a circular path.
-                                </p>
-                                <h5>Map</h5>
-                                <p>In order to navigate successfully towards passengers and the dropoff zone, we programmed the map into the
-                                TINAH board. The nodes on the map were stored in an incidence matrix, which described the cardinal direction of each adjacent node
-                                with respect to the current node.
+        <!-- Main -->
+        <article id="mainSoftware">
+            <header>
+                <h2>Software Design</h2>
+            </header>
+            <section class="wrapper style5">
+                <div class="inner">
+                    <div id="navigation"></div>
+                    <hr />
+                    <h3>Navigation</h3>
+                    <p>
+                        To facilitate navigation along the competition surface, we made use of the QRD1114 sensors <a href="https://enph253rhobot.github.io/electrical.html">described here</a>.
+                    </p>
+                    <h5>Tape Following</h5>
+                    <p>
+                        PD Control was used for the robot's tape-following, correcting for when the two main tape-following QRDs were
+                        on or off the black tape. Proportional and Derivative gains were tuned with each iteration of the robot until
+                        the robot was capable of smoothly following tape along straight edges, curved edges, and in a circular path.
+                    </p>
+                    <h5>Map</h5>
+                    <p>
+                        In order to navigate successfully towards passengers and the dropoff zone, we programmed the map into the
+                        TINAH board. The nodes on the map were stored in an incidence matrix, which described the cardinal direction of each adjacent node
+                        with respect to the current node.
 
-                                We then developed an algorithm for calculating the optimal path to the dropoff zone from any point on the map, so the robot will know
-                                how to head to the dropoff at any point after acquiring a passenger.
-                                </p>
-							<hr />
+                        We then developed an algorithm for calculating the optimal path to the dropoff zone from any point on the map, so the robot will know
+                        how to head to the dropoff at any point after acquiring a passenger.
+                    </p>
+                    <hr />
 
-							<h3>Arm & Claw</h3>
-                            <p> The miniature city had varying distances between the road and the curb. Thus it was very important to have adaptibility in how far the arm reaches out for the passengers. The mechanical arm had programming which allowed the claw to move forward in increments, with a proximinity sensor <a href="https://enph253rhobot.github.io/electrical.html">(QRD)</a> attached to the end of the claw to determine when the passenger was in the claw's grasp. </p>
+                    <h3>Arm & Claw</h3>
+                    <p> The miniature city had varying distances between the road and the curb. Thus it was very important to have adaptibility in how far the arm reaches out for the passengers. The mechanical arm had programming which allowed the claw to move forward in increments, with a proximinity sensor <a href="https://enph253rhobot.github.io/electrical.html">(QRD)</a> attached to the end of the claw to determine when the passenger was in the claw's grasp. </p>
 
-						</div>
-					</section>
-				</article>
+                </div>
+            </section>
+        </article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://github.com/djschultz/enph253group6" class="icon fa-github"><span class="label">Github</span></a></li>
-														<li><a href="https://grabcad.com/library/roombot-ubc-enph-253-1"><img src="images/cadIcon.png"/></a></li>
-														<!--<li><a href="#" class="icon fa-facebook"><span class="label">facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">email</span></a></li>-->
-						</ul>
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://github.com/djschultz/enph253group6" class="icon fa-github"><span class="label">Github</span></a></li>
+                <li><a href="https://grabcad.com/library/roombot-ubc-enph-253-1"><img src="images/cadIcon.png" /></a></li>
+                <!--<li><a href="#" class="icon fa-facebook"><span class="label">facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">instagram</span></a></li>
+                <li><a href="#" class="icon fa-dribbble"><span class="label">dribbble</span></a></li>
+                <li><a href="#" class="icon fa-envelope-o"><span class="label">email</span></a></li>-->
+            </ul>
 
-                        <ul class="actions vertical">
-                            <li><a href="#" class="button ">To Top</a></li>
-                        </ul>
-						<ul class="copyright">
-							<li>&copy; ENPH 253 </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+            <ul class="actions vertical">
+                <li><a href="#" class="button ">To Top</a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; ENPH 253 </li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
 
-			</div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
 
-	</body>
+</body>
 </html>
